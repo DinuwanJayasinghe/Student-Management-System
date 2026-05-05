@@ -9,6 +9,7 @@ namespace SchoolManagementSystem.Forms
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Button btnStudents;
         private System.Windows.Forms.Button btnTeachers;
+        private System.Windows.Forms.Button btnParents;
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnLogout;
 
@@ -29,6 +30,7 @@ namespace SchoolManagementSystem.Forms
             this.lblUser = new System.Windows.Forms.Label();
             this.btnStudents = new System.Windows.Forms.Button();
             this.btnTeachers = new System.Windows.Forms.Button();
+            this.btnParents = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.pnlSidebar.SuspendLayout();
@@ -39,6 +41,7 @@ namespace SchoolManagementSystem.Forms
             //
             this.pnlSidebar.Controls.Add(this.btnLogout);
             this.pnlSidebar.Controls.Add(this.btnReports);
+            this.pnlSidebar.Controls.Add(this.btnParents);
             this.pnlSidebar.Controls.Add(this.btnTeachers);
             this.pnlSidebar.Controls.Add(this.btnStudents);
             this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -69,6 +72,7 @@ namespace SchoolManagementSystem.Forms
             this.pnlContent.Location = new System.Drawing.Point(220, 60);
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(780, 540);
+            this.pnlContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
             //
             // btnStudents
             //
@@ -79,6 +83,11 @@ namespace SchoolManagementSystem.Forms
             //
             this.btnTeachers.Text = " 👨‍🏫 Teachers";
             this.btnTeachers.Click += new System.EventHandler(this.btnTeachers_Click);
+            //
+            // btnParents
+            //
+            this.btnParents.Text = " 👪 Parents";
+            this.btnParents.Click += new System.EventHandler(this.btnParents_Click);
             //
             // btnReports
             //

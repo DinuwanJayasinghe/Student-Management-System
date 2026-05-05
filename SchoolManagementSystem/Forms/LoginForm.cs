@@ -19,6 +19,14 @@ namespace SchoolManagementSystem.Forms
             this.BackColor = UITheme.BackgroundColor;
             UITheme.ApplyButtonStyle(btnLogin);
             lblTitle.ForeColor = UITheme.PrimaryColor;
+            UITheme.ApplyCardStyle(panel1);
+
+            lblUsername.Font = new Font("Segoe UI", 9f);
+            lblPassword.Font = new Font("Segoe UI", 9f);
+            lblRole.Font = new Font("Segoe UI", 9f);
+
+            txtUsername.BorderStyle = BorderStyle.FixedSingle;
+            txtPassword.BorderStyle = BorderStyle.FixedSingle;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

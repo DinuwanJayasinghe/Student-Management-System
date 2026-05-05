@@ -9,6 +9,7 @@ namespace SchoolManagementSystem.Forms
     public partial class ManageStudentsForm : Form
     {
         private StudentService studentService = new StudentService();
+        private System.Windows.Forms.Button btnAddStudent;
 
         public ManageStudentsForm()
         {
@@ -21,10 +22,11 @@ namespace SchoolManagementSystem.Forms
         {
             this.BackColor = UITheme.BackgroundColor;
             UITheme.ApplyHeaderStyle(lblTitle);
-            dgvStudents.BackgroundColor = Color.White;
-            dgvStudents.BorderStyle = BorderStyle.None;
-            dgvStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvStudents.MultiSelect = false;
+            UITheme.ApplyDataGridViewStyle(dgvStudents);
+            UITheme.ApplyButtonStyle(btnAddStudent);
+
+            txtSearch.BorderStyle = BorderStyle.FixedSingle;
+            lblSearch.Font = new Font("Segoe UI", 9f);
         }
 
         private void LoadStudents()
@@ -45,6 +47,12 @@ namespace SchoolManagementSystem.Forms
                 var name = dgvStudents.Rows[e.RowIndex].Cells["student_name"].Value.ToString();
                 MessageBox.Show($"Profile Details for {name}\nRegistration No: {regNo}", "Student Profile", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            new StudentRegistrationForm().ShowDialog();
+            LoadStudents();
         }
     }
 }

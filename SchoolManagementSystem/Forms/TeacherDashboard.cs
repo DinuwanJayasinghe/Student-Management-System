@@ -20,7 +20,10 @@ namespace SchoolManagementSystem.Forms
         {
             pnlSidebar.BackColor = UITheme.SidebarColor;
             pnlHeader.BackColor = Color.White;
-            lblUser.Text = $"Welcome, {AuthService.CurrentUser?.Name} (Teacher)";
+            lblUser.Text = $"Welcome, {AuthService.CurrentUser?.Name}";
+            lblUser.ForeColor = UITheme.PrimaryDark;
+            lblUser.Cursor = Cursors.Hand;
+            lblUser.Click += (s, e) => ShowForm(new ProfileForm(AuthService.CurrentUser));
 
             UITheme.ApplySidebarButtonStyle(btnAttendance);
             UITheme.ApplySidebarButtonStyle(btnMarkMyAttendance);
@@ -50,6 +53,11 @@ namespace SchoolManagementSystem.Forms
         private void btnStudents_Click(object sender, EventArgs e)
         {
             ShowForm(new ManageStudentsForm());
+        }
+
+        private void btnAttendance_Click(object sender, EventArgs e)
+        {
+            ShowForm(new MarkAttendanceForm(AuthService.CurrentUser.Id));
         }
 
         private void ShowForm(Form form)

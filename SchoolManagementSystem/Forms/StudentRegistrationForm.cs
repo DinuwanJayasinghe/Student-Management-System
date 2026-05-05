@@ -23,6 +23,18 @@ namespace SchoolManagementSystem.Forms
             this.BackColor = UITheme.BackgroundColor;
             UITheme.ApplyButtonStyle(btnRegister);
             UITheme.ApplyHeaderStyle(lblTitle);
+            UITheme.ApplyCardStyle(pnlCard);
+
+            lblName.Font = new Font("Segoe UI", 9f);
+            lblBirthday.Font = new Font("Segoe UI", 9f);
+            lblClass.Font = new Font("Segoe UI", 9f);
+            lblAddress.Font = new Font("Segoe UI", 9f);
+            lblMobile.Font = new Font("Segoe UI", 9f);
+            lblParent.Font = new Font("Segoe UI", 9f);
+
+            txtName.BorderStyle = BorderStyle.FixedSingle;
+            txtAddress.BorderStyle = BorderStyle.FixedSingle;
+            txtMobile.BorderStyle = BorderStyle.FixedSingle;
         }
 
         private void LoadInitialData()

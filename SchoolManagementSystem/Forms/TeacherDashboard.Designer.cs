@@ -73,6 +73,7 @@ namespace SchoolManagementSystem.Forms
             // btnAttendance
             //
             this.btnAttendance.Text = " 📝 Mark Student";
+            this.btnAttendance.Click += new System.EventHandler(this.btnAttendance_Click);
             //
             // btnMarkMyAttendance
             //

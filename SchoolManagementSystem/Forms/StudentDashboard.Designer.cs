@@ -70,10 +70,12 @@ namespace SchoolManagementSystem.Forms
             // btnProfile
             //
             this.btnProfile.Text = " 👤 My Profile";
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             //
             // btnAttendance
             //
             this.btnAttendance.Text = " 📅 Attendance";
+            this.btnAttendance.Click += new System.EventHandler(this.btnAttendance_Click);
             //
             // btnLogout
             //

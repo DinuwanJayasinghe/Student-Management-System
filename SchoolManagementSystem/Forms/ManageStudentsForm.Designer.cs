@@ -23,6 +23,7 @@ namespace SchoolManagementSystem.Forms
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
+            this.btnAddStudent = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.SuspendLayout();
             //
@@ -48,12 +49,20 @@ namespace SchoolManagementSystem.Forms
             this.dgvStudents.AllowUserToAddRows = false;
             this.dgvStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStudents.Location = new System.Drawing.Point(20, 110);
-            this.dgvStudents.Size = new System.Drawing.Size(740, 410);
+            this.dgvStudents.Size = new System.Drawing.Size(740, 370);
             this.dgvStudents.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellDoubleClick);
+            //
+            // btnAddStudent
+            //
+            this.btnAddStudent.Location = new System.Drawing.Point(560, 485);
+            this.btnAddStudent.Size = new System.Drawing.Size(200, 40);
+            this.btnAddStudent.Text = " ➕ REGISTER STUDENT";
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             //
             // ManageStudentsForm
             //
             this.ClientSize = new System.Drawing.Size(780, 540);
+            this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtSearch);

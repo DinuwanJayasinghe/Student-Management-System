@@ -18,11 +18,21 @@ namespace SchoolManagementSystem.Forms
         {
             pnlSidebar.BackColor = UITheme.SidebarColor;
             pnlHeader.BackColor = Color.White;
-            lblUser.Text = $"Welcome, {AuthService.CurrentUser?.Name} (Student)";
+            lblUser.Text = $"Welcome, {AuthService.CurrentUser?.Name}";
+            lblUser.ForeColor = UITheme.PrimaryDark;
 
             UITheme.ApplySidebarButtonStyle(btnProfile);
             UITheme.ApplySidebarButtonStyle(btnAttendance);
             UITheme.ApplySidebarButtonStyle(btnLogout);
+        }
+
+        private void ShowForm(Form form)
+        {
+            pnlContent.Controls.Clear();
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            pnlContent.Controls.Add(form);
+            form.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -30,6 +40,16 @@ namespace SchoolManagementSystem.Forms
             AuthService.Logout();
             new LoginForm().Show();
             this.Close();
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            ShowForm(new ProfileForm(AuthService.CurrentUser));
+        }
+
+        private void btnAttendance_Click(object sender, EventArgs e)
+        {
+            ShowForm(new StudentAttendanceViewForm(AuthService.CurrentUser.Id));
         }
     }
 }

@@ -47,19 +47,20 @@ namespace SchoolManagementSystem.Forms
             this.panel1.Controls.Add(this.lblRole);
             this.panel1.Controls.Add(this.cmbRole);
             this.panel1.Controls.Add(this.btnLogin);
-            this.panel1.Location = new System.Drawing.Point(50, 50);
+            this.panel1.Location = new System.Drawing.Point(50, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 400);
+            this.panel1.Size = new System.Drawing.Size(300, 420);
             this.panel1.TabIndex = 0;
             //
             // lblTitle
             //
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(100, 30);
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Location = new System.Drawing.Point(60, 20);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(100, 37);
-            this.lblTitle.Text = "LOGIN";
+            this.lblTitle.Size = new System.Drawing.Size(180, 41);
+            this.lblTitle.Text = "Welcome Back";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             //
             // lblUsername
             //

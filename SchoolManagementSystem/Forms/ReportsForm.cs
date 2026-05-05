@@ -22,7 +22,7 @@ namespace SchoolManagementSystem.Forms
             UITheme.ApplyHeaderStyle(lblTitle);
             UITheme.ApplyButtonStyle(btnStudentReport);
             UITheme.ApplyButtonStyle(btnContactList);
-            dgvReports.BackgroundColor = Color.White;
+            UITheme.ApplyDataGridViewStyle(dgvReports);
         }
 
         private void btnStudentReport_Click(object sender, EventArgs e)
